@@ -7,11 +7,16 @@ public class InteractiveItem : MonoBehaviour
 {
     private Vector3 originalScale;
     public float scaleMultiplier = 2.0f;
+   
+
     // Start is called before the first frame update
     void Start()
     {
         originalScale = transform.localScale;
+        
     }
+    
+
     void OnMouseEnter()
     {
         transform.localScale = originalScale * scaleMultiplier; 
@@ -26,4 +31,5 @@ public class InteractiveItem : MonoBehaviour
     {
 
     }
+    
 }
