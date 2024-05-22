@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InteractiveItem : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class InteractiveItem : MonoBehaviour
     }
     void OnMouseEnter()
     {
-        transform.localScale = originalScale * scaleMultiplier;
+        transform.localScale = originalScale * scaleMultiplier; 
     }
     void OnMouseExit()
     {
