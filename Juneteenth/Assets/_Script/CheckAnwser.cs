@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class CheckAnwser : MonoBehaviour
 {
@@ -102,7 +103,11 @@ public class CheckAnwser : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         resultText.gameObject.SetActive(false);
+        if (checkMatch())
+        {
+            SceneManager.LoadScene("end");
+        }
+        
     }
-
 
 }
