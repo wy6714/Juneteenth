@@ -557,13 +557,15 @@ MonoBehaviour:
 
     ---Art---
 
+    Kayla Andreoli
+
 
     ---Music---
 
-    Soune Effect by Kenny
+    Soune Effect
+    by Kenny
 
-    BGM by
-    mixkit
+    BGM by mixkit
 
 
     ---Font---
@@ -1045,7 +1047,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1150538611
 RectTransform:
   m_ObjectHideFlags: 0
