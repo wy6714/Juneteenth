@@ -11,6 +11,7 @@ public class CheckAnwser : MonoBehaviour
     private string resultStr;
     private float delayTime = 2f;
     [SerializeField] GameObject FinishButton;
+    [SerializeField] AudioSource incorrectSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +41,10 @@ public class CheckAnwser : MonoBehaviour
         resultText.gameObject.SetActive(true);
 
         bool isMatch = checkMatch();
+        if (!isMatch)
+        {
+            incorrectSound.Play();
+        }
 
         //if (isMatch) { Debug.Log("correct"); } else { Debug.Log("incorrect"); }
         Debug.Log(isMatch ? "correct" : "incorrect");
