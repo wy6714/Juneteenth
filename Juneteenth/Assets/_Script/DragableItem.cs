@@ -13,7 +13,8 @@ public class DragableItem : MonoBehaviour
     private GameObject[] holderArray;
     void Start()
     {
-        holderArray = GameObject.FindGameObjectsWithTag(holderTag);
+       
+        holderArray = GameObject.FindGameObjectsWithTag(holderTag);  
     }
 
     // Update is called once per frame
@@ -48,13 +49,21 @@ public class DragableItem : MonoBehaviour
     {
         isDragging = false;
         //check distance with all time holder
-        foreach (GameObject obj in holderArray)
+        if(holderArray != null)
         {
-            if (Vector2.Distance(transform.position, obj.transform.position) <= 0.5)
+            foreach (GameObject obj in holderArray)
             {
-                transform.position = obj.transform.position;
+                if (Vector2.Distance(transform.position, obj.transform.position) <= 0.5)
+                {
+                    transform.position = obj.transform.position;
+                }
             }
         }
+        else
+        {
+            return;
+        }
+        
     }
     public void posWithMouse(GameObject obj)
     {

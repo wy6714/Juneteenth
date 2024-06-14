@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,6 +13,15 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject q2Reward;
     [SerializeField] private GameObject q3Reward;
     [SerializeField] private GameObject q4Reward;
+
+    //event
+    public static event Action<string> activeReward;
+
+    //[SerializeField] private bool musicActive = false;
+    //[SerializeField] private bool heartActive = false;
+    //[SerializeField] private bool smileActive = false;
+    //[SerializeField] private bool flagActive = false;
+
 
     private void Awake()
     {
@@ -54,6 +64,8 @@ public class GameManager : MonoBehaviour
         q1Reward.SetActive(true);
 
         StartCoroutine(closeRewardAfterDelay(2f, q1Reward));
+        //musicActive = true;
+        activeReward?.Invoke("music");//turn off cover;allow dragable
 
     }
 
@@ -62,6 +74,8 @@ public class GameManager : MonoBehaviour
         q2Reward.SetActive(true);
 
         StartCoroutine(closeRewardAfterDelay(2f, q2Reward));
+        //heartActive = true;
+        activeReward?.Invoke("heart");
 
     }
     public void showQ3Reaward()
@@ -69,6 +83,8 @@ public class GameManager : MonoBehaviour
         q3Reward.SetActive(true);
 
         StartCoroutine(closeRewardAfterDelay(2f, q3Reward));
+        //smileActive = true;
+        activeReward?.Invoke("smile");
 
     }
     public void showQ4Reaward()
@@ -76,7 +92,8 @@ public class GameManager : MonoBehaviour
         q4Reward.SetActive(true);
 
         StartCoroutine(closeRewardAfterDelay(2f, q4Reward));
-
+        //flagActive = true;
+        activeReward?.Invoke("flag");
     }
 
 
