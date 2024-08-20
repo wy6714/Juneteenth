@@ -835,14 +835,13 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Congratulations!\n\nYou have completed the game!\n\nToday, we honor Juneteenth,
-    a day of freedom and reflection. \nOn June 19, 1865, the last enslaved African
-    Americans were emancipated in Galveston, Texas, marking a pivotal moment in history.
-    \n\nJuneteenth is a celebration of resilience, strength, and the enduring spirit
-    of those who fought for justice and equality. As we reflect on this journey,
-    let us remember the sacrifices made and the progress achieved, and continue to
-    strive for a future where freedom and equality are universal.\n\nThank you for
-    playing and celebrating with us. \n\nHappy Juneteenth!\n"
+  m_text: "Congratulations!\n\nYou finished the game!\n\nToday, we celebrate Juneteenth,
+    a special day of freedom. \nOn June 19, 1865, the last enslaved African Americans
+    were set free in Galveston, Texas. This was an important moment in history.\n\nJuneteenth
+    is a time to celebrate strength and the spirit of those who fought for fairness.
+    As we think about this, let\u2019s remember the hard work and how far we\u2019ve
+    come. We keep working for a future where everyone is free and equal.\n\nThank
+    you for playing and celebrating with us.\n\nHappy Juneteenth!"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
